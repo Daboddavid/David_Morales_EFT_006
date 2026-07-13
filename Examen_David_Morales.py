@@ -181,6 +181,8 @@ def menu():
                         print("ingrese solo numeros")
                     peliculas.setdefault(codigo,[]).append(f"{titulo},{generon},{duracion},{clasificacion},{idioma},{es_3d},{es_3dd(es_3d)}")
                     cartelera.setdefault(codigo,[]).append(f"{precio},{cupos}")
+                    print(peliculas)
+                    print(cartelera)
                     
             case 5:
                 mostrarpel()    
