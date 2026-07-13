@@ -77,7 +77,7 @@ def clasificacionn(clasificacion):
         return False
 
 def es_3dd(es_3d):
-    if es_3d is "S":
+    if es_3d is "s":
         return True
     else:
         return False
@@ -157,8 +157,8 @@ def menu():
                     else:
                         print("clasificacion incorrecta")
                         salir="yes"
-                    idioma=input("ingrese el idioma de la pelicula: ")
-                    es_3d=input("la pelicula es 3d (s/n): ")
+                    idioma=input("ingrese el idioma de la pelicula: ").title().replace(" ","")
+                    es_3d=input("la pelicula es 3d (s/n): ").lower()
                     if es_3dd(es_3d):
                         print("ingresando datos")
                     else:
@@ -182,7 +182,6 @@ def menu():
                     peliculas.setdefault(codigo,[]).append(f"{titulo},{generon},{duracion},{clasificacion},{idioma},{es_3d},{es_3dd(es_3d)}")
                     cartelera.setdefault(codigo,[]).append(f"{precio},{cupos}")
                     
-
             case 5:
                 mostrarpel()    
                 codigo=input("ingrese el codigo de la pelicula que desea eliminar: ")
